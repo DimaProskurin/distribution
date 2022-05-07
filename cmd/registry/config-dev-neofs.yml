@@ -28,25 +28,21 @@ storage:
         enabled: false
     neofs:
       wallet:
-        path: /home/user/github/nspcc/neofs-dev-env/wallets/wallet.json
-        password: ""
+        path: /neofs-aio/http/node-wallet.json
+        password: "one"
       peers:
         0:
-          address: s01.neofs.devenv:8080
-          weight: 1
-          priority: 1
-        1:
-          address: s02.neofs.devenv:8080
+          address: sn:8080
           weight: 1
           priority: 1
       # container can be nicename (rpc_endpoint is required)
-      container: A8cfsuT1cBi46Carks9kqbVULwoQiJfif2JVozf3nb4j
+      container: 7vYqwLPddmjXppQv9SiE9GEr22PbawK2fjFcKFw8c85M
       # the following params are optional
       session_expiration_duration: 1000 # in epoch
       connection_timeout: 5s
       request_timeout: 5s
       rebalance_interval: 30s
-      rpc_endpoint: http://morph_chain.neofs.devenv:30333
+      rpc_endpoint: morph:30333
 http:
     addr: :5000
     debug:
